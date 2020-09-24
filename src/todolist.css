@@ -1,3 +1,17 @@
+.todopattern{
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        position:absolute;
+        z-index:2;
+        background-image: url("/static/images/corona.png");
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+}
+
 .todolistmain{
 	padding: 10px;
 	font-size: 16px;

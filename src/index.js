@@ -7,7 +7,7 @@ import {Arwes, ThemeProvider, createTheme } from 'arwes';
 ReactDOM.render(
   <React.StrictMode>
    <ThemeProvider theme={createTheme()}>
-    <Arwes animate show>
+    <Arwes classes={{pattern:"todopattern"}} animate show>
 	<TodoList />
     </Arwes>
    </ThemeProvider>

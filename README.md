@@ -1,5 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 # Todolist
 Todolist is a web based todo list that utilizes the Arwes framework of ReactJS. :robot:
 

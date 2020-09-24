@@ -1,5 +1,5 @@
 # Todolist
-Todolist is a web based todo list that utilizes the Arwes framework of ReactJS. :robot:
+Todolist is a web based todo list that utilizes the [Arwes](https://github.com/arwes/arwes) framework and [React](https://github.com/facebook/react) library. :robot:
 
 First, clone the repo:
 ### `git clone https://github.com/jesseriggs/todolist/`

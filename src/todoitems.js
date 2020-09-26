@@ -1,20 +1,21 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-import {Arwes} from 'arwes';
 
 class TodoItems extends Component{
 	constructor(props){
 		super(props);
 		this.createTasks = this.createTasks.bind(this);
-
+		this.sounds = props.sounds;
 	}
 	delete(key){
+		this.sounds.logo.play();
 		this.props.delete(key);
 	}
 	createTasks(item){
-		return <li 
+		return (
+			<li
 			onClick={()=>this.delete(item.key)}
 			key={item.key}>{item.text}</li>
+		);
 	}
 	render(){
 		var todoEntries = this.props.entries;

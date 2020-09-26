@@ -1,6 +1,39 @@
 import React, {Component} from 'react';
-import {Button} from 'arwes';
+import {Button, SoundsProvider, createSounds, withSounds} from 'arwes';
 import TodoItems from './todoitems.js';
+
+const FormSounds={
+	shared:{volume:1,},
+	players:{
+		deploy:{
+			sound:{src:['static/sound/deploy.mp3']}
+		},
+		expand:{
+			sound:{src:['static/sound/expand.mp3']}
+		},
+		logo:{
+			sound:{src:['static/sound/logo.mp3']}
+		},
+	}
+};
+
+const SubmitButton = withSounds()(props=>(
+	<Button
+		show={props.show}
+		animate
+		type={"submit"}
+		onClick={()=>{props.sounds.expand.play()}}
+		{...props}
+	>Submit</Button>
+));
+
+const MyItems = withSounds()(props=>(
+	<TodoItems 
+		entries={props.entries}
+		delete={props.delete} 
+		sounds={props.sounds}
+	/>
+));
 
 class TodoList extends Component{
 	constructor(props){
@@ -18,7 +51,7 @@ class TodoList extends Component{
 		if(this._inputElement.value !== ""){
 			var newItem = {
 				text: this._inputElement.value,
-				key: Date.now()
+				key: Date.now(),
 			};
 			this.setState((prevState)=>{
 				return {
@@ -48,14 +81,18 @@ class TodoList extends Component{
 				<input ref={(a) => this._inputElement = a}
 					placeholder="enter task">
 				</input>
-				<Button type={"submit"}>Submit</Button>
+				<SoundsProvider sounds={createSounds(FormSounds)}>
+					<SubmitButton />
+				</SoundsProvider>
 			   </form>
 			  </div>
-			  <TodoItems entries={this.state.items}
-				delete={this.deleteItem}/>
+			  <SoundsProvider sounds={createSounds(FormSounds)}>
+			      <MyItems entries={this.state.items}
+				delete={this.deleteItem} />
+			  </SoundsProvider>
 			</div>
 		);
 	}
 }
 
-export default TodoList;
+export {TodoList, FormSounds};

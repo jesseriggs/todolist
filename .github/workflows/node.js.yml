@@ -35,5 +35,4 @@ jobs:
       - name: printdir
         run: pwd
       - name: showdir
-        run: | 
-          ls -R
+        run: ls -R

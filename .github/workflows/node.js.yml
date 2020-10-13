@@ -35,4 +35,6 @@ jobs:
       - name: printdir
         run: pwd
       - name: showdir
-        run: pwd
+        run: | 
+          pwd
+          test.sh

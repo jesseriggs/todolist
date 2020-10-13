@@ -31,5 +31,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: printdir
-        run: pwd
+        run: echo Test
         working-directory: ./test/ci/

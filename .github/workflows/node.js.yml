@@ -37,4 +37,3 @@ jobs:
       - name: showdir
         run: | 
           ls -R
-        working-directory: ${{env.working-directory}}

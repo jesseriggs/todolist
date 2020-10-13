@@ -32,3 +32,4 @@ jobs:
     steps:
       - name: printdir
         run: echo "Test"
+        working-directory: test/ci/

@@ -10,7 +10,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  web:
 
     runs-on: ubuntu-latest
 
@@ -26,3 +26,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run build --if-present
+  test:
+    - name: testing ci
+      run: test.sh
+      working-directory: ./test/ci/

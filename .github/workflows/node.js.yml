@@ -31,4 +31,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - working-directory: ./test/ci/
-      - run: test.sh
+        run: pwd
+        run: test.sh

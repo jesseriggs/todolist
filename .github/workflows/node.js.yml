@@ -31,6 +31,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: printdir
-        run: echo Test
-        working-directory: ./test/ci/
-        shell: bash
+        run: echo "Test"

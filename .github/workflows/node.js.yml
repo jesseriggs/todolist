@@ -33,3 +33,4 @@ jobs:
       - name: printdir
         run: echo Test
         working-directory: ./test/ci/
+        shell: bash

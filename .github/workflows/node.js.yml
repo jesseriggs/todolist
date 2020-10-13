@@ -33,4 +33,5 @@ jobs:
       - name: printdir
         run: pwd
       - name: showdir
-        run: ls
+        run: pwd
+        working-directory: test/ci/

@@ -36,6 +36,5 @@ jobs:
         run: pwd
       - name: showdir
         run: | 
-          pwd
-          ./test.sh
+          ls -R
         working-directory: ${{ evn.working-directory }}

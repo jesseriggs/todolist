@@ -33,6 +33,4 @@ jobs:
       - name: printdir
         run: pwd
       - name: showdir
-        run:
-          cd test
-          pwd
+        run: cd test

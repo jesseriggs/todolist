@@ -29,10 +29,10 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
-    env:
-      working-directory: ./test/ci/
     steps:
       - name: printdir
         run: pwd
       - name: showdir
-        run: ls -R
+        run:
+          cd test
+          pwd

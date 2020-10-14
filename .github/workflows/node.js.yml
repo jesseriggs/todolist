@@ -29,11 +29,8 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ../test
     steps:
       - name: printdir
         run: pwd
       - name: showdir
-        run: ls -a
+        run: ls ../

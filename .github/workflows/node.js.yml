@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./test/ci
+        working-directory: ./test
     steps:
       - name: printdir
         run: pwd
